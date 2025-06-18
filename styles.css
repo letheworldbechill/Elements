@@ -1,0 +1,112 @@
+body {
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f4f4f4;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+header {
+  background: #eaeaea;
+  text-align: center;
+  padding: 1rem;
+}
+
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 1rem;
+  background: #eee;
+}
+
+.controls input,
+.controls select,
+.controls button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  min-width: 120px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+#periodic-table {
+  display: grid;
+  grid-template-columns: repeat(18, minmax(2rem, 1fr));
+  gap: 2px;
+  max-width: 100%;
+  width: 100%;
+}
+
+.element {
+  background: #fff;
+  border: 1px solid #aaa;
+  padding: 0.5rem;
+  text-align: center;
+  font-size: 0.9rem;
+  cursor: pointer;
+  min-height: 60px;
+  word-wrap: break-word;
+}
+
+.element:hover {
+  background: #d0f0ff;
+}
+
+.placeholder {
+  visibility: hidden;
+}
+
+#element-info {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  flex: 1 1 300px;
+  max-width: 400px;
+}
+
+#quiz-area {
+  background: #fff;
+  border: 1px solid #ccc;
+  padding: 1rem;
+  margin: 1rem;
+  max-width: 600px;
+}
+
+button {
+  cursor: pointer;
+}
+
+/* Dark Mode */
+body.dark {
+  background: #121212;
+  color: #f4f4f4;
+}
+body.dark .element {
+  background: #333;
+  color: #fff;
+}
+body.dark #element-info,
+body.dark #quiz-area {
+  background: #2a2a2a;
+}
+
+/* Mobile Layout */
+@media (max-width: 800px) {
+  #periodic-table {
+    grid-template-columns: repeat(6, 1fr);
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+}
