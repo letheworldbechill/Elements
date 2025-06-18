@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Periodensystem Lern-Tool</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Periodensystem der Elemente</h1>
+    <p>Interaktiv lernen, Quiz starten, Elemente entdecken</p>
+  </header>
+
+  <nav class="controls">
+    <select id="group-filter">
+      <option value="">Alle Gruppen</option>
+      <option value="alkalimetalle">Alkalimetalle</option>
+      <option value="halogene">Halogene</option>
+      <option value="edelgase">Edelgase</option>
+    </select>
+    <input id="search" placeholder="Suche Element..." />
+    <button id="start-quiz">Quiz starten</button>
+    <button id="toggle-dark">Dark Mode</button>
+  </nav>
+
+  <main>
+    <section id="periodic-table"></section>
+    <aside id="element-info">
+      <h2>Elementinformationen</h2>
+      <p id="info-content">Wähle ein Element aus.</p>
+    </aside>
+  </main>
+
+  <section id="quiz-area" hidden>
+    <h2>Quiz</h2>
+    <p id="quiz-question"></p>
+    <div id="quiz-choices"></div>
+    <p id="quiz-feedback"></p>
+    <p id="quiz-progress"></p>
+    <button id="quiz-next" hidden>Weiter</button>
+  </section>
+
+  <script src="data.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
